@@ -1,0 +1,17 @@
+- defaults:
+    link:
+      relink: true
+
+- clean: ['~']
+
+# - link:
+#    ~/.tmux.conf: tmux.conf
+#    ~/.vim: vim
+#    ~/.vimrc: vimrc
+
+- create:
+    - ~/work
+    - ~/swagger/hub/files
+
+# - shell:
+#  - [git submodule update --init --recursive, Installing submodules]
