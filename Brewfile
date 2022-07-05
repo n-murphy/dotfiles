@@ -33,6 +33,7 @@ brew "yq"
 # Casks (Applications)
 cask "alfred"
 cask "dropbox"
+cask "gitkraken"
 cask "macdown"
 cask "microsoft-azure-storage-explorer"
 cask "visual-studio-code"
