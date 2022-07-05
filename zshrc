@@ -9,6 +9,9 @@ cat <<EOF
 EOF
 
 # Set variables
+# Syntax highlighting for man pages
+export MANPAGER="sh -c 'col -bx | bat -l man -p'"
+
 
 # Change ZSH options
 
