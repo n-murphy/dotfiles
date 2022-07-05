@@ -16,7 +16,7 @@ export HOMEBREW_CASK_OPTS="--no-quarantine"
 # Change ZSH options
 
 # Create Aliases
-alias ll='ls -lAFh'
+alias ll='command ls -lAFh'
 alias exa='exa -laFh --git'
 alias ls='exa -laFh --git'
 alias u='cd /Users/noel.murphy/github/sb-devops-personal ; git commit -am "supplemental update $(date)" ; git push ; cd -'
