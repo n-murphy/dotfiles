@@ -10,12 +10,13 @@ EOF
 
 # Set variables
 # Syntax highlighting for man pages
-export MANPAGER="sh -c 'col -bx | bat -l man -p'"
+#export MANPAGER="sh -c 'col -bx | bat -l man -p'"
 export HOMEBREW_CASK_OPTS="--no-quarantine"
 
 # Change ZSH options
 
 # Create Aliases
+alias man=batman
 alias ll='command ls -lAFh'
 alias exa='exa -laFh --git --sort=modified'
 alias ls='exa -laFh --git --sort=modified'
