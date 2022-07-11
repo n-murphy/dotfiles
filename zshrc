@@ -26,14 +26,40 @@ export HOMEBREW_CASK_OPTS="--no-quarantine"
 # tw(other write) is set to 31(red)
 export EXA_COLORS="ur=4;33:uw=4;31:ux=4;32:gw=31:tw=31"
 
+# For heredoc (<<) and here string (<<<) cat is the default command to use if not specified.
+# This can be changed by setting the NULLCMD shell variable.
+# The following will mean that the alias called trail below for displaying the path variable 
+# will now use bat instead of cat.
+# export NULLCMD=bat
+
+
+
 # Change ZSH options
 
 # Create Aliases
 alias man=batman
+
+# ls command options used
+# -l = List in long format
+# -A = List all entries except for . and ...
+# -F =Display file kind indicators next to file names e.g. / for a directory and * for an executable.
+# -h = human readable UOM for file sizes
 alias ll='command ls -lAFh'
+
+# exa command options used
+# -l = List in long format
+# -a = Show hidden and "dot" files.
+# -F = Display file kind indicators next to file names
+# -h =  Add a header row to each column
+# --git = List each file's Git status, if tracked
+# --sort=modified = sort by modified time asc.
 alias exa='exa -laFh --git --sort=modified'
 alias ls='exa -laFh --git --sort=modified'
 alias u='cd /Users/noel.murphy/github/sb-devops-personal ; git commit -am "supplemental update $(date)" ; git push ; cd -'
+
+# using <<< (here string) which will default to using cat by default unless NULLCMD shell variable is set.
+# (F) means we are using a parameter expansion flag to use a return instead of a ':' as the array item separator. 
+# lowercase path is the array version of PATH shell variable.
 alias trail='<<<${(F)path}'
 
 # Customize Prompts
