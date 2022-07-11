@@ -34,6 +34,7 @@ alias ll='command ls -lAFh'
 alias exa='exa -laFh --git --sort=modified'
 alias ls='exa -laFh --git --sort=modified'
 alias u='cd /Users/noel.murphy/github/sb-devops-personal ; git commit -am "supplemental update $(date)" ; git push ; cd -'
+alias trail='<<<${(F)path}'
 
 # Customize Prompts
 PROMPT='
