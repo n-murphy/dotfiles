@@ -30,7 +30,6 @@ brew "hashicorp/tap/packer"
 brew "mongodb/brew/mongodb-community-shell"
 # Casks (Applications)
 cask "dropbox"
-cask "gitkraken"
 cask "macdown"
 cask "microsoft-azure-storage-explorer"
 cask "visual-studio-code"
