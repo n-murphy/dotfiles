@@ -32,6 +32,9 @@ export EXA_COLORS="ur=4;33:uw=4;31:ux=4;32:gw=31:tw=31"
 # will now use bat instead of cat.
 # export NULLCMD=bat
 
+# variables needed for the n tool for managing node versions. See https://github.com/tj/n for details.
+export N_PREFIX="${HOME}/.n"
+export PREFIX="${N_PREFIX}"
 
 
 # Change ZSH options
@@ -71,6 +74,7 @@ RPROMPT='%*'
 # Add locations to $PATH variable
 # Add Visual Studio Code (code)
 export PATH="$PATH:/Applications/Visual Studio Code.app/Contents/Resources/app/bin"
+export PATH="$PATH:${N_PREFIX}/bin"
 
 # Functions
 function mkcd() {
