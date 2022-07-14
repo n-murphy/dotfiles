@@ -18,7 +18,6 @@ brew "jq"
 brew "kubernetes-cli", link: false
 brew "mongocli"
 brew "n"
-brew "node"
 brew "ripgrep"
 brew "terraform", link: false
 brew "tfenv"
