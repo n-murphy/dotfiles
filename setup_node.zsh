@@ -16,6 +16,6 @@ fi
 # Install Global NPM Packages
 # npm i -g firebase-tools
 # can also be written as `npm install --global firebase-tools`
-npm i -g --force swaggerhub-cli
+#npm i -g --force swaggerhub-cli
 echo "Global NPM Packages Installed:"
 npm list --global --depth=0
