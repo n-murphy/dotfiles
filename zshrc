@@ -71,11 +71,17 @@ PROMPT='
 
 RPROMPT='%*'
 
-# Add locations to $PATH variable
-# Add Visual Studio Code (code)
-export PATH="${N_PREFIX}/bin:$PATH"
-export PATH="$PATH:/Applications/Visual Studio Code.app/Contents/Resources/app/bin"
+# Add locations to path array
 
+# tell the shell how to treat the path array in this case we want it to contain unique array items.
+typeset -U path
+
+# Add custom locations to the array
+path=(
+  ${N_PREFIX}/bin
+  $path
+  "/Applications/Visual Studio Code.app/Contents/Resources/app/bin"
+)
 
 # Functions
 function mkcd() {

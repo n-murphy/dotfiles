@@ -3,7 +3,7 @@
 echo "\n<<<Starting Node Setup>>>\n"
 
 # Node versions are managed with `n`, which is in the brewfile
-# See zshrc for the N_PREFIX variable and addition to the PATH
+# See zshrc for the N_PREFIX variable and addition to the path array
 
 if exists node; then
   echo "node $(node --version) and npm $(npm --version), already installed"
