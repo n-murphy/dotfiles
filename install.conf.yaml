@@ -11,6 +11,9 @@
     ~/.config/bat:
       create: true
       path: config/bat
+    ~/.config/yamllint:
+      create: true
+      path: config/yamllint
 
 - create:
     - ~/work
