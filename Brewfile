@@ -17,6 +17,7 @@ brew "httpie"
 brew "jq"
 brew "kubernetes-cli", link: false
 brew "mongocli"
+brew "n"
 brew "node"
 brew "ripgrep"
 brew "terraform", link: false
@@ -30,7 +31,6 @@ brew "hashicorp/tap/packer"
 brew "mongodb/brew/mongodb-community-shell"
 # Casks (Applications)
 cask "dropbox"
-cask "gitkraken"
 cask "macdown"
 cask "microsoft-azure-storage-explorer"
 cask "visual-studio-code"
