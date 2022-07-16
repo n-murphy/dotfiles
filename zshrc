@@ -57,13 +57,14 @@ alias ll='command ls -lAFh'
 # --git = List each file's Git status, if tracked
 # --sort=modified = sort by modified time asc.
 alias exa='exa -laFh --git --sort=modified'
-alias ls='exa -laFh --git --sort=modified'
+#alias ls='exa -laFh --git --sort=modified'
 alias u='cd /Users/noel.murphy/github/sb-devops-personal ; git commit -am "supplemental update $(date)" ; git push ; cd -'
 
 # using <<< (here string) which will default to using cat by default unless NULLCMD shell variable is set.
 # (F) means we are using a parameter expansion flag to use a return instead of a ':' as the array item separator. 
 # lowercase path is the array version of PATH shell variable.
 alias trail='<<<${(F)path}'
+alias ftrail='<<<${(F)fpath}'
 
 # Customize Prompts
 PROMPT='
