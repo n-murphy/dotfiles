@@ -6,3 +6,6 @@
 
 [includeIf "gitdir:~/Courses/"]
   path = ~/Courses/.gitconfig
+
+[core]
+	editor = vim
