@@ -1,0 +1,14 @@
+{
+    "workbench.colorTheme": "Default Dark+",
+    "editor.renderWhitespace": "all",
+    "editor.tabSize": 2,
+    "workbench.startupEditor": "none",
+    "editor.minimap.enabled": false,
+    "git.autofetch": true,
+    "files.associations": {
+        "Brewfile": "shellscript"
+    },
+    "terminal.integrated.defaultProfile.osx": "zsh",
+    "terminal.external.osxExec": "iTerm.app",
+    "terminal.integrated.fontFamily": "Fira Code",
+}

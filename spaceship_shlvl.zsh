@@ -7,7 +7,7 @@
 # Configuration
 # ------------------------------------------------------------------------------
 
-SPACESHIP_SHLVL_SHOW="${SPACESHIP_SHLVL_SHOW=true}"
+SPACESHIP_SHLVL_SHOW="${SPACESHIP_SHLVL_SHOW=false}"
 SPACESHIP_SHLVL_PREFIX="${SPACESHIP_SHLVL_PREFIX=""}"
 SPACESHIP_SHLVL_SUFFIX="${SPACESHIP_SHLVL_SUFFIX=" "}"
 SPACESHIP_SHLVL_COLOR="${SPACESHIP_SHLVL_COLOR="blue"}"

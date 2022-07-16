@@ -100,7 +100,7 @@ SPACESHIP_CHAR_SYMBOL="❯ "
 SPACESHIP_TIME_SHOW=true
 SPACESHIP_EXEC_TIME_ELAPSED=0
 SPACESHIP_BATTERY_SHOW=always
-SPACESHIP_EXIT_CODE_SHOW=true
+SPACESHIP_EXIT_CODE_SHOW=false
 
 SPACESHIP_PROMPT_ORDER=(
   user          # Username section
@@ -111,7 +111,7 @@ SPACESHIP_PROMPT_ORDER=(
   # node          # Node.js section
   exec_time     # Execution time
   line_sep      # Line break
-  shlvl         # Custom section from spaceship_shlvl.zsh
+  #shlvl         # Custom section from spaceship_shlvl.zsh
   # vi_mode       # Vi-mode indicator
   # jobs          # Background jobs indicator
   char          # Prompt character

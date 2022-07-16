@@ -18,4 +18,4 @@ fi
 # can also be written as `npm install --global firebase-tools`
 #npm i -g --force swaggerhub-cli
 echo "Global NPM Packages Installed:"
-npm list --global --depth=0
+npm list --location=global --depth=0
