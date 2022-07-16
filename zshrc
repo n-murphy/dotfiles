@@ -10,12 +10,15 @@ running .zshrc in interactive shell.
 Shell level is $SHLVL
 EOF
 
+# #############################################################################
 # Set variables
+# #############################################################################
+
 # Syntax highlighting for man pages
 #export MANPAGER="sh -c 'col -bx | bat -l man -p'"
 
-# disable gatekeeper for apps installed via brew
-export HOMEBREW_CASK_OPTS="--no-quarantine"
+export DOTFILES="${HOME}/github/.dotfiles"
+export HOMEBREW_BUNDLE_FILE="${DOTFILES}/Brewfile"
 
 # change exa colours for the permission bit run `man exa_colors` for details
 # in this example:
@@ -32,14 +35,28 @@ export EXA_COLORS="ur=4;33:uw=4;31:ux=4;32:gw=31:tw=31"
 # will now use bat instead of cat.
 # export NULLCMD=bat
 
-# variables needed for the n tool for managing node versions. See https://github.com/tj/n for details.
-export N_PREFIX="${HOME}/.n"
-export PREFIX="${N_PREFIX}"
-
-
+# #############################################################################
 # Change ZSH options
+# #############################################################################
 
+# Adjust History Variables & Options
+[[ -z $HISTFILE ]] && HISTFILE="${HOME}/.zsh_history"
+HISTSIZE=100000 # Session Memory Limit
+SAVEHIST=100000 # File Memory Limit
+
+setopt histNoStore          # Don't store history related functions
+setopt extendedHistory      # Save timestamp in the history
+setopt histIgnoreAllDups    # Don't add entries to history if they are duplicates
+setopt incAppendHistoryTime # Include timing info
+
+# Line Editor Options (Completion, Menu, Directory, etc.)
+# autoMenu & autoList are on by default
+setopt autoCd               # only need directory name when changing directory
+setopt globDots             # lets files beginning with a . be matched without specifying the dot.
+
+# #############################################################################
 # Create Aliases
+# #############################################################################
 alias man=batman
 
 # ls command options used
@@ -66,13 +83,49 @@ alias u='cd /Users/noel.murphy/github/sb-devops-personal ; git commit -am "suppl
 alias trail='<<<${(F)path}'
 alias ftrail='<<<${(F)fpath}'
 
+# Load history into shell (shareHistory alternative)
+alias lh='fc -RI; echo "loaded and showing..."; history;'
+
+# #############################################################################
 # Customize Prompts
-PROMPT='
-%1~ %L %# '
+# #############################################################################
 
-RPROMPT='%*'
+#PROMPT='
+#%1~ %L %# '
+#RPROMPT='%*'
 
+source "$DOTFILES/spaceship_shlvl.zsh"
+
+SPACESHIP_CHAR_SYMBOL="❯ "
+SPACESHIP_TIME_SHOW=true
+SPACESHIP_EXEC_TIME_ELAPSED=0
+SPACESHIP_BATTERY_SHOW=always
+SPACESHIP_EXIT_CODE_SHOW=true
+
+SPACESHIP_PROMPT_ORDER=(
+  user          # Username section
+  dir           # Current directory section
+  host          # Hostname section
+  git           # Git section (git_branch + git_status)
+  package       # Package version
+  # node          # Node.js section
+  exec_time     # Execution time
+  line_sep      # Line break
+  shlvl         # Custom section from spaceship_shlvl.zsh
+  # vi_mode       # Vi-mode indicator
+  # jobs          # Background jobs indicator
+  char          # Prompt character
+)
+
+SPACESHIP_RPROMPT_ORDER=(
+  exit_code
+  battery
+  time
+)
+
+# #############################################################################
 # Add locations to path array
+# #############################################################################
 
 # tell the shell how to treat the path array in this case we want it to contain unique array items.
 typeset -U path
@@ -84,12 +137,31 @@ path=(
   "/Applications/Visual Studio Code.app/Contents/Resources/app/bin"
 )
 
+# #############################################################################
 # Functions
+# #############################################################################
+
 function mkcd() {
   mkdir -p "$@" && cd "$_";
 }
 
+# #############################################################################
 # ZSH Plugins
+# #############################################################################
+ZSH_AUTOSUGGEST_STRATEGY=(history completion)
+source <(antibody init)
+antibody bundle < "${DOTFILES}/antibody_plugins"
 
-
+# #############################################################################
 # ... surprises!!
+# #############################################################################
+
+# Change Key Bindings
+
+# `^[[A` = up arrow
+# `^[[B` = down arrow
+bindkey '^[[A' history-substring-search-up
+bindkey '^[[B' history-substring-search-down
+
+# Load "New" Completion System
+autoload -Uz compinit && compinit

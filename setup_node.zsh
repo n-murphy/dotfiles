@@ -5,8 +5,8 @@ echo "\n<<<Starting Node Setup>>>\n"
 # Node versions are managed with `n`, which is in the brewfile
 # See zshrc for the N_PREFIX variable and addition to the path array
 
-if exists node; then
-  echo "node $(node --version) and npm $(npm --version), already installed"
+if exists ${N_PREFIX}/bin/node; then
+  echo "node $(${N_PREFIX}/bin/node --version) and npm $(${N_PREFIX}/bin/npm --version), already installed"
 else
   echo "Installing node and npm with n ..."
   n lts
