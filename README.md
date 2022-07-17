@@ -1,13 +1,19 @@
-# dotfiles
-Mac dotfiles
+# Ubuntu dotfiles
 
-Learning about dotfiles at [dotfiles.eieio.xyz](http://dotfiles.eieio.xyz).
+Tasks
+=====
+- [ ] Ubuntu:
+  - [x] Create an Ubuntu branch in the dotfiles repository [**Done**]
+  - [ ] Create a `setup_zsh.sh` script to install and configure zsh on ubuntu [*WIP*] 
+  - [x] Create a `remove_zsh.sh` script for removing zsh (for testing purposes) [**Done**] 
+  - [x] Install multipass and create an instance for testing out the zsh install script [**Done**] {}
 
-## TODO
-- [ ] Terminal Preference
-- [ ] Changed shell to ZSH
-- [ ] Dock Preferences
-- [ ] Mission control preferences (don't rearrange spaces)
-- [ ] Finder show path bar
-- [x] Trackpad (3 finger drag and Tap to click)
-- [ ] Git (config and SSH)
+
+
+
+
+#### Multipass
+
+```bash
+multipass launch --name lts --cpus 2 --mem 4G --disk 5G --cloud-init ./cloud-init.yaml focal
+```
