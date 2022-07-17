@@ -1,0 +1,20 @@
+---
+users:
+  - default:
+    name: ubuntu
+    gecos: Ubuntu
+    sudo: ALL=(ALL) NOPASSWD:ALL
+    groups: users, admin
+    shell: /bin/bash
+    ssh_import_id: None
+    ssh_authorized_keys:
+      - ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAACAQDbF9qSH4y+xO2Su8QDtpvwHSmRihQAqHM/CYR+4UYJJ8iUNmfjaPaBXnw56WPGX0xU5Ql2fYg3/4UiL3OV/JTNqy9OC6Gu4Q2OtJq/kTvpS6q3Q5l4xbTFj+CTlb9E89IhT4XnATlxesD9mfcwxtk2H86z+ED6PI1Yx82zCLFhSXpe5w6OjxJuA+m49W1g8y4aDfHwNCJvZ6xb6jbNHfy3xToq581PIpYDqxdh0jkTiXZDiMqNPeFHqFiS5m3CTpFxtHukAqSexvS7lq1F8Vd9WMWTS90HlSem0cDgWdIdOmN4dZi90PiFJk1SLXhzZgHwmKtM3qlYGGxWbq1n223XjyMwmhsnq1uMt0AytxKYMtt7SRW/3Ua6P4nX6H7Q2eEVrkB788yc8fozZHKkR0VKgKfBVq9nptvGblcphS3p3QV/MuhVSb8dg+8p0vomiVcT1eYUFVCebpT9o6Fnzu3JE+q99TD2eiBaTGjLBc1k+fjGOoOAgEz1sihE9FvBj/Da+PB6kguLJG68DRW57WvcBBlReuhBOVwGPlH0SyRiDo6X4Wy1oQvvbPpGQmCBSsJet7+kFXWJ8sGf5nHitkxv2eOQgOZIigb45uGNtM8nScFyczhjW3YHGATgpsJbfJxusJxPu5CnuOgQuX9jZwH6lXGLYarylFd6sTGPoveqaQ== noelzilla@gmail.com
+package_update: true
+package_upgrade: true
+packages:
+  # list of useful packages to install
+  - avahi-daemon
+  - git
+  - vim
+  - curl
+  - wget
