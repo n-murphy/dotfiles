@@ -23,7 +23,6 @@ if [[ $(uname) == "Linux" ]] ; then
     sudo apt update
     sudo apt install -y zsh
   fi # zsh already exists
-  
 else
   echo "This is not Linux but $(uname) exiting gracefully ..."
   exit 0

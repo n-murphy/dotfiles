@@ -4,7 +4,7 @@ Tasks
 =====
 - [ ] Ubuntu:
   - [x] Create an Ubuntu branch in the dotfiles repository [**Done**]
-  - [ ] Create a `setup_zsh.sh` script to install and configure zsh on ubuntu [*WIP*] 
+  - [x] Create a `setup_zsh.sh` script to install and configure zsh on ubuntu [**Done**] 
   - [x] Create a `remove_zsh.sh` script for removing zsh (for testing purposes) [**Done**] 
   - [x] Install multipass and create an instance for testing out the zsh install script [**Done**] {}
 
