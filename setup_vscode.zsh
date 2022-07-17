@@ -3,7 +3,7 @@
 echo "\n<<<Starting VSCode Setup>>>\n"
 echo ""
 
-VSCODE_SETTINGS_DIR="${HOME}/Library/Application Support/Code/User"
+VSCODE_SETTINGS_DIR="${HOME}/.config/Code/User"
 
 
 

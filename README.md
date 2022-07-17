@@ -7,6 +7,7 @@ Tasks
   - [x] Create a `setup_zsh.sh` script to install and configure zsh on ubuntu [**Done**] 
   - [x] Create a `remove_zsh.sh` script for removing zsh (for testing purposes) [**Done**] 
   - [x] Install multipass and create an instance for testing out the zsh install script [**Done**] {}
+  - [ ] Refactor the zsh dot files for ubuntu [*WIP*]
 
 
 

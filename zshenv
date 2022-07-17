@@ -9,17 +9,6 @@ Shell level is $SHLVL
 EOF
 
 ##
-## variables
-##
-
-# disable gatekeeper for apps installed via brew
-export HOMEBREW_CASK_OPTS="--no-quarantine --no-binaries"
-
-# variables needed for the n tool for managing node versions. See https://github.com/tj/n for details.
-export N_PREFIX="${HOME}/.n"
-export PREFIX="${N_PREFIX}"
-
-##
 ## functions
 ##
 

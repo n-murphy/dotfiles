@@ -17,8 +17,7 @@ EOF
 # Syntax highlighting for man pages
 #export MANPAGER="sh -c 'col -bx | bat -l man -p'"
 
-export DOTFILES="${HOME}/github/.dotfiles"
-export HOMEBREW_BUNDLE_FILE="${DOTFILES}/Brewfile"
+export DOTFILES="${HOME}/github/dotfiles"
 
 # change exa colours for the permission bit run `man exa_colors` for details
 # in this example:
@@ -75,7 +74,6 @@ alias ll='command ls -lAFh'
 # --sort=modified = sort by modified time asc.
 alias exa='exa -laFh --git --sort=modified'
 #alias ls='exa -laFh --git --sort=modified'
-alias u='cd /Users/noel.murphy/github/sb-devops-personal ; git commit -am "supplemental update $(date)" ; git push ; cd -'
 
 # using <<< (here string) which will default to using cat by default unless NULLCMD shell variable is set.
 # (F) means we are using a parameter expansion flag to use a return instead of a ':' as the array item separator. 
@@ -132,9 +130,7 @@ typeset -U path
 
 # Add custom locations to the array
 path=(
-  ${N_PREFIX}/bin
   $path
-  "/Applications/Visual Studio Code.app/Contents/Resources/app/bin"
 )
 
 # #############################################################################
@@ -148,9 +144,9 @@ function mkcd() {
 # #############################################################################
 # ZSH Plugins
 # #############################################################################
-ZSH_AUTOSUGGEST_STRATEGY=(history completion)
-source <(antibody init)
-antibody bundle < "${DOTFILES}/antibody_plugins"
+#ZSH_AUTOSUGGEST_STRATEGY=(history completion)
+#source <(antibody init)
+#antibody bundle < "${DOTFILES}/antibody_plugins"
 
 # #############################################################################
 # ... surprises!!
@@ -160,8 +156,8 @@ antibody bundle < "${DOTFILES}/antibody_plugins"
 
 # `^[[A` = up arrow
 # `^[[B` = down arrow
-bindkey '^[[A' history-substring-search-up
-bindkey '^[[B' history-substring-search-down
+#bindkey '^[[A' history-substring-search-up
+#bindkey '^[[B' history-substring-search-down
 
 # Load "New" Completion System
 autoload -Uz compinit && compinit
