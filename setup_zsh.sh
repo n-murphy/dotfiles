@@ -20,8 +20,16 @@ if [[ $(uname) == "Linux" ]] ; then
     exit 0
   else
     echo "You may be prompted for your password in order to run the next set of commands using sudo ..."
-    sudo apt update
-    sudo apt install -y zsh
+    # update and install
+    sudo apt update && sudo apt install -y zsh
+
+    # switch to the zsh
+    if [ "$SHELL" = '/usr/bin/zsh' ]; then
+      echo '$SHELL is already /usr/bin/zsh'
+    else
+      echo "You may be prompted to enter the user password to change login shell"
+      chsh -s '/usr/bin/zsh'
+    fi # switch to zsh
   fi # zsh already exists
 else
   echo "This is not Linux but $(uname) exiting gracefully ..."

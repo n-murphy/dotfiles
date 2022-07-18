@@ -8,6 +8,8 @@ Tasks
   - [x] Create a `remove_zsh.sh` script for removing zsh (for testing purposes) [**Done**] 
   - [x] Install multipass and create an instance for testing out the zsh install script [**Done**] {}
   - [ ] Refactor the zsh dot files for ubuntu [*WIP*]
+  - [ ] Look into using brew on ubuntu [*WIP*]
+  - [x] Add user password for ubuntu user on cloud-init file [**Done**]
 
 
 
