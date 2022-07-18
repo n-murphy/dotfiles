@@ -7,13 +7,17 @@ if exists brew; then
 else
   echo "brew doesn't exist, continuing with the install . . ."
   /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+
+  # Because on initial install brew is not in the PATH we can run the following to add it.
+  source <(/home/linuxbrew/.linuxbrew/bin/brew shellenv)
 fi
 
 
-# brew bundle --verbose
+brew bundle --verbose
 
 
 # This works to solve the Insecure Directories issue:
 # From the Homebrew site for shell completions:
 # https://docs.brew.sh/Shell-Completion#configuring-completions-in-zsh
+
 chmod -R go-w "$(brew --prefix)/share"

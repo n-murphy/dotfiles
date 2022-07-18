@@ -130,6 +130,8 @@ typeset -U path
 
 # Add custom locations to the array
 path=(
+  "/home/linuxbrew/.linuxbrew/bin"
+  "/home/linuxbrew/.linuxbrew/sbin"
   $path
 )
 
