@@ -7,9 +7,11 @@ Tasks
   - [x] Create a `setup_zsh.sh` script to install and configure zsh on ubuntu [**Done**] 
   - [x] Create a `remove_zsh.sh` script for removing zsh (for testing purposes) [**Done**] 
   - [x] Install multipass and create an instance for testing out the zsh install script [**Done**] {}
-  - [ ] Refactor the zsh dot files for ubuntu [*WIP*]
-  - [ ] Look into using brew on ubuntu [*WIP*]
+  - [x] Refactor the zsh dot files for ubuntu [**Done**]
+  - [x] Look into using brew on ubuntu [**Done**]
   - [x] Add user password for ubuntu user on cloud-init file [**Done**]
+  - [ ] Add zsh plugin manager (maybe antidote) [TODO]
+  - [ ] Add deb packages (e.g. VSCode) [TODO]
 
 
 
@@ -18,5 +20,5 @@ Tasks
 #### Multipass
 
 ```bash
-multipass launch --name lts --cpus 2 --mem 4G --disk 5G --cloud-init ./cloud-init.yaml focal
+multipass launch --name cleanlts --cpus 2 --mem 3G --disk 8G --cloud-init ./cloud-init.yaml focal
 ```
