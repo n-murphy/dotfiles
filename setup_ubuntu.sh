@@ -10,10 +10,9 @@
 # #############################################################################
 echo "You may be prompted to enter your user password in order to run sudo"
 sudo apt update && \ 
-sudo apt install -y \
-fonts-firacode \ 
-whois
-
+sudo apt install -y fonts-firacode \
+whois \
+unzip
 
 # #############################################################################
 # Download and install deb packages
