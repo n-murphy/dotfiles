@@ -12,7 +12,7 @@ if [[ -d "$VSCODE_SETTINGS_DIR" ]] ; then
   cp ./settings.json $VSCODE_SETTINGS_DIR
 else
   echo "$VSCODE_SETTINGS_DIR directory not found, exiting disgracefully"
-  exit 1
+  exit 0
 fi
 
 echo "Installing VS Code Extensions"
