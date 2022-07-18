@@ -23,12 +23,12 @@
     command: ./setup_zsh.sh
     stdout: true
     stderr: true
+  - 
+    command: ./setup_homebrew.zsh
+    stdout: true
+    stderr: true
   # - 
   #   command: ./setup_node.zsh
-  #   stdout: true
-  #   stderr: true
-  # - 
-  #   command: ./setup_iterm2.zsh
   #   stdout: true
   #   stderr: true
   # - 
