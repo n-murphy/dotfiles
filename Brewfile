@@ -6,7 +6,6 @@ tap "homebrew/core"
 tap "mongodb/brew"
 tap "eth-p/software"
 # Brews (Packages)
-brew "antibody"
 brew "augeas"
 brew "bat"
 brew "bat-extras"
