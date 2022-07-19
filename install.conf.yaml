@@ -5,6 +5,7 @@
 - clean: ['~']
 
 - link:
+    ~/.zsh_plugins.txt: antidote_plugins
     ~/.zshrc:
     ~/.zshenv:
     ~/.gitconfig:
@@ -14,11 +15,17 @@
     ~/.config/yamllint:
       create: true
       path: config/yamllint
+   
+
 
 - create:
     - ~/work
 
 - shell:
+  - 
+    command: ./setup_antidote.zsh
+    stdout: true
+    stderr: true
   - 
     command: ./setup_homebrew.zsh
     stdout: true
