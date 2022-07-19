@@ -12,3 +12,4 @@ denysdovhan/spaceship-prompt
 # with this script, then make sure that you load it
 # before you load this script:
 zsh-users/zsh-history-substring-search
+
