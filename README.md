@@ -2,7 +2,7 @@
 
 #### Introduction
 
-The **ubuntu** branch is where my dotfiles reside for my Ubuntu instances and has been tested using multipass (please see the relavent README.md in the multipass folder).
+The **ubuntu** branch is where my dotfiles reside for my Ubuntu instances and has been tested using multipass (please see the  [README.md](multipass/README.md) in the multipass folder for more details).
 
 We are using DotBot to orchestrate the dotfiles configuration and installation of other tools (brew, antidote etc).
 
