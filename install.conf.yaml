@@ -31,7 +31,7 @@
     stdout: true
     stderr: true
   - 
-    command: ./setup_antidote.sh
+    command: ./setup_antidote.zsh
     stdin: true
     stdout: true
     stderr: true
