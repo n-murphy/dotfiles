@@ -88,7 +88,7 @@ alias ftrail='<<<${(F)fpath}'
 alias lh='fc -RI; echo "loaded and showing..."; history;'
 
 # re-generate the .zsh_plugins.zsh file
-alias regen_antidote=". ${ANTIDOTE_DIR}/antidote.zsh ; antidote bundle < ${HOME}/.zsh_plugins.txt > ${HOME}/.zsh_plugins.zsh"
+alias regen_antidote="antidote bundle < ${HOME}/.zsh_plugins.txt > ${HOME}/.zsh_plugins.zsh"
 
 # #############################################################################
 # Customize Prompts
@@ -136,6 +136,7 @@ typeset -U path
 
 # Add custom locations to the array
 path=(
+  "/usr/local/opt/python@3.10/bin"
   ${N_PREFIX}/bin
   $path
   "/Applications/Visual Studio Code.app/Contents/Resources/app/bin"
@@ -185,4 +186,4 @@ bindkey '^[[B' history-substring-search-down
 
 # Load "New" Completion System and antidote
 autoload -Uz compinit && compinit 
-autoload -Uz $ANTIDOTE_DIR/functions/antidote
+autoload -Uz antidote
