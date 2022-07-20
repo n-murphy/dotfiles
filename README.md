@@ -10,7 +10,7 @@ Tasks
   - [x] Refactor the zsh dot files for ubuntu [**Done**]
   - [x] Look into using brew on ubuntu [**Done**]
   - [x] Add user password for ubuntu user on cloud-init file [**Done**]
-  - [ ] Add zsh plugin manager (maybe antidote) [TODO]
+  - [ ] Add zsh plugin manager (maybe antidote) [*WIP*]
   - [ ] Add deb packages (e.g. VSCode) [TODO]
 
 

@@ -18,6 +18,8 @@ EOF
 #export MANPAGER="sh -c 'col -bx | bat -l man -p'"
 
 export DOTFILES="${HOME}/github/dotfiles"
+export HOMEBREW_BUNDLE_FILE="${DOTFILES}/Brewfile"
+export ANTIDOTE_DIR="${HOME}/.config/antidote"
 
 # change exa colours for the permission bit run `man exa_colors` for details
 # in this example:
@@ -84,6 +86,9 @@ alias ftrail='<<<${(F)fpath}'
 # Load history into shell (shareHistory alternative)
 alias lh='fc -RI; echo "loaded and showing..."; history;'
 
+# re-generate the .zsh_plugins.zsh file
+alias regen_antidote="antidote bundle < ${HOME}/.zsh_plugins.txt > ${HOME}/.zsh_plugins.zsh"
+
 # #############################################################################
 # Customize Prompts
 # #############################################################################
@@ -135,6 +140,12 @@ path=(
   $path
 )
 
+# tell the shell how to treat the fpath array in this case we want it to contain unique array items.
+typeset -U fpath
+
+# Add custom locations to the array
+fpath+=( ${ANTIDOTE_DIR}/functions )
+
 # #############################################################################
 # Functions
 # #############################################################################
@@ -146,9 +157,16 @@ function mkcd() {
 # #############################################################################
 # ZSH Plugins
 # #############################################################################
-#ZSH_AUTOSUGGEST_STRATEGY=(history completion)
-#source <(antibody init)
-#antibody bundle < "${DOTFILES}/antibody_plugins"
+ZSH_AUTOSUGGEST_STRATEGY=(history completion)
+
+
+# recommended static method of sourcing ANTIDOTE plugins
+source ${HOME}/.zsh_plugins.zsh
+
+# ANTIDOTE drop in replacement for antibody
+# source ${ANTIDOTE_DIR}/antidote.zsh
+# source <(antidote init)
+# antidote bundle < "${DOTFILES}/antidote_plugins"
 
 # #############################################################################
 # ... surprises!!
@@ -158,8 +176,9 @@ function mkcd() {
 
 # `^[[A` = up arrow
 # `^[[B` = down arrow
-#bindkey '^[[A' history-substring-search-up
-#bindkey '^[[B' history-substring-search-down
+bindkey '^[[A' history-substring-search-up
+bindkey '^[[B' history-substring-search-down
 
-# Load "New" Completion System
+# Load "New" Completion System and antidote
 autoload -Uz compinit && compinit
+autoload -Uz antidote

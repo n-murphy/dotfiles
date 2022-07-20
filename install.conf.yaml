@@ -5,6 +5,7 @@
 - clean: ['~']
 
 - link:
+    ~/.zsh_plugins.txt: antidote_plugins
     ~/.zshrc:
     ~/.zshenv:
     ~/.gitconfig:
@@ -26,6 +27,11 @@
     stderr: true
   - 
     command: ./setup_ubuntu.sh
+    stdin: true
+    stdout: true
+    stderr: true
+  - 
+    command: ./setup_antidote.sh
     stdin: true
     stdout: true
     stderr: true
