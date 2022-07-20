@@ -4,7 +4,11 @@ zsh-users/zsh-autosuggestions
 zdharma/history-search-multi-word
 zdharma/fast-syntax-highlighting
 
+# pimp the prompt with spaceship
 denysdovhan/spaceship-prompt
+
+# adding multipass from oh-my-zsh, using the path annotation:
+ohmyzsh/ohmyzsh   path:plugins/multipass
 
 # This plugin might need to be the last one.
 # https://github.com/zsh-users/zsh-history-substring-search#usage
