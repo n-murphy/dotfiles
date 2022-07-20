@@ -33,7 +33,7 @@ Finally the install script will run the following setup scripts:
 > Installs homebrew and proceeds to install the brews specified in the `Brewfile`
 
 `./setup_node.sh`
-> Installs  `n` the node version manager and installs some node packages (I have this commented out as I don't use node that much) 
+> Installs  `node` (lts) and `npm` using the node version manager `n` and installs some node packages (I'm not installing any packages here at the moment as I don't use node that much). The `n` node version manager itself is installed via homebrew in the `setup_homebrew.zsh` script via the `brew bundle` command. 
 
 `./setup_iterm2.sh`
 > Runs `defaults` to set a custom folder for loading preferences from file.
