@@ -1,8 +1,8 @@
-#### Testing with multipass
+### Testing with multipass
 
 I've used multipass to spin up a LTS (focal) instance and test out the dotfiles setup.
 
-##### Spin up a multipass instance
+#### Spin up a multipass instance
 
 If you don't have multipass installed already then head over to <https://multipass.run/install> for instructions.
 
@@ -12,7 +12,7 @@ With multipass installed run the following:
 multipass launch --name lts --cpus 2 --mem 3G --disk 8G --cloud-init ./cloud-init.yaml focal
 ```
 
-##### ssh into lts instance
+#### ssh into lts instance
 
 > I've used cloud-init to enable password authentication and I have added a couple of public keys as well for a `nmurphy` user
 > Feel free to update this file to suit your own needs.
@@ -25,7 +25,7 @@ ssh nmurphy@lts.local
 multipass shell lts
 ```
 
-##### Running the install
+#### Running the install
 
 To configure dotfiles run the following commands:
 
@@ -35,6 +35,9 @@ mkdir github ; cd github
 git clone https://github.com/n-murphy/dotfiles.git
 
 cd dotfiles
+
+# checkout the ubuntu branch
+git checkout ubuntu
 
 # as part of the install you will be prompted a couple of times for a password (which is 'password')
 ./install
