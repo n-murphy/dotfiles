@@ -9,7 +9,7 @@
 # whois: because I want the mkpasswd utility for use with cloud-init
 # #############################################################################
 echo "You may be prompted to enter your user password in order to run sudo"
-sudo apt update && \ 
+sudo apt update && \
 sudo apt install -y fonts-firacode \
 whois \
 unzip
