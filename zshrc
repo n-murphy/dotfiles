@@ -104,6 +104,9 @@ SPACESHIP_TIME_SHOW=true
 SPACESHIP_EXEC_TIME_ELAPSED=0
 SPACESHIP_BATTERY_SHOW=always
 SPACESHIP_EXIT_CODE_SHOW=false
+SPACESHIP_USER_SHOW=always # accepted values :- false, always, true and needed
+SPACESHIP_HOST_SHOW=true   # accepted values :- false, always, true and needed
+SPACESHIP_DIR_TRUNC=5
 
 SPACESHIP_PROMPT_ORDER=(
   user          # Username section
