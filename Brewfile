@@ -16,6 +16,8 @@ brew "python@3.10"
 brew "httpie"
 # Lightweight and flexible command-line JSON processor
 brew "jq"
+# Ambitious Vim-fork focused on extensibility and agility
+brew "neovim"
 # Search tool like grep and The Silver Searcher
 brew "ripgrep"
 # Display directories as trees (with optional color/HTML output)
