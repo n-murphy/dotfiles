@@ -11,7 +11,7 @@
 call plug#begin()
 
 Plug 'https://github.com/vim-airline/vim-airline' " Status bar
-
+Plug 'ryanoasis/vim-devicons'
 
 set encoding=UTF-8
 
