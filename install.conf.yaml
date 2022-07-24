@@ -15,6 +15,9 @@
     ~/.config/yamllint:
       create: true
       path: config/yamllint
+    ~/.config/nvim:
+      create: true
+      path: config/nvim
 
 - create:
     - ~/work
