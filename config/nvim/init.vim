@@ -16,3 +16,9 @@ Plug 'ryanoasis/vim-devicons'
 set encoding=UTF-8
 
 call plug#end()
+
+" set guifont=DroidSansMono\ Nerd\ Font\ 11
+
+
+
+let g:airline_powerline_fonts = 1
