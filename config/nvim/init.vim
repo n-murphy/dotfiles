@@ -1,5 +1,4 @@
 :set number
-" :set relativenumber
 :set autoindent
 :set tabstop=4
 :set shiftwidth=4
@@ -11,14 +10,12 @@
 call plug#begin()
 
 Plug 'https://github.com/vim-airline/vim-airline' " Status bar
+Plug 'preservim/nerdtree'
 Plug 'ryanoasis/vim-devicons'
 
 set encoding=UTF-8
 
 call plug#end()
-
-" set guifont=DroidSansMono\ Nerd\ Font\ 11
-
 
 
 let g:airline_powerline_fonts = 1
