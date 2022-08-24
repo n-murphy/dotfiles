@@ -1,15 +1,3 @@
-# Welcome message:
-
-cat <<EOF
- _____    _
-|__  /___| |__  _ __ ___
-  / // __| '_ \| '__/ __|
- / /_\__ \ | | | | | (__
-/____|___/_| |_|_|  \___|
-running .zshrc in interactive shell.
-Shell level is $SHLVL
-EOF
-
 # #############################################################################
 # Set variables
 # #############################################################################
@@ -190,3 +178,8 @@ bindkey '^[[B' history-substring-search-down
 # Load "New" Completion System and antidote
 autoload -Uz compinit && compinit 
 autoload -Uz antidote
+
+# Welcome message:
+if exists neofetch ; then
+  neofetch
+fi
