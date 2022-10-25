@@ -31,6 +31,7 @@ brew "yamllint"
 brew "yq"
 brew "hashicorp/tap/packer"
 brew "mongodb/brew/mongodb-community-shell"
+brew "mongosh"
 # Casks (Applications)
 cask "font-droid-sans-mono-for-powerline"
 cask "font-fira-code"
